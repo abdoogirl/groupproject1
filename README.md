@@ -1,10 +1,10 @@
 # groupproject1
 To Do List for project 1
 
-participants: 
-afrika collier
-liz audannio
-aaron whitaker 
-abby powell
+Participants: 
+Afrika Collier, 
+Liz Audannio, 
+Aaron Whitaker, 
+Abby Powell
 
 Hanuka Mattata to-do list
