@@ -2,15 +2,23 @@
     font-family: 'Red Hat Mono', monospace!important;
 }
 
-.container {
-
-}
-
-.title{
-    
-}
-
-/*.selector-for-some-widget {
-    box-sizing: content-box;
-  }*/
+.header {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+  }
+  .header-nav {
+    float: right;
+    padding: 5.5vh 60px 0 0;
+  }
+  .header-nav > li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .header-nav > li ~ li {
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 1em;
+  }
   
