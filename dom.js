@@ -47,7 +47,7 @@ for (let i=0; i < listItems.length; i++) {
     setTimeout(removeCurrent, 1000);
  }
 
-
+/*hello*/
 
 
 
