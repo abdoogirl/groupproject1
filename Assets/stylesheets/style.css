@@ -2,23 +2,27 @@
     font-family: 'Red Hat Mono', monospace!important;
 }
 
-.header {
-    background-color: #000;
-    color: #fff;
-    position: fixed;
-    width: 100%;
-    z-index: 20;
-  }
-  .header-nav {
-    float: right;
-    padding: 5.5vh 60px 0 0;
-  }
-  .header-nav > li {
-    display: inline-block;
-    margin-left: 1em;
-  }
-  .header-nav > li ~ li {
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    padding-left: 1em;
-  }
-  
+.title {
+    text-align: center;
+}
+
+.myTasks {
+    align-items: center;
+    border: 0;
+    margin-bottom: 0;
+    margin: rounded;
+}
+
+
+/* <a href="#!" data-mdb-toggle="tooltip" title="Remove item"> */
+
+
+
+
+/*.selector-for-some-widget {
+    box-sizing: content-box;
+}*/
+.gradient-custom {
+    background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%), linear-gradient(121.28deg, #669600 0%, #ff0000 100%), linear-gradient(360deg, #0029ff 0%, #8fff00 100%), radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%), radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+}
