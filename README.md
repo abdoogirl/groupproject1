@@ -9,7 +9,7 @@ Abby Powell
 
 Hanuka Mattata to-do list
 
-1. Add an entry 
+1. Add an entry - Afrika 
 2. Remove entry - Afrika
 3. mark entry as complete - Aaron
-4. bootstrap and css - Liz
+4. bootstrap and css - Liz and Abby
