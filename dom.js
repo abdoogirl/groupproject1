@@ -18,26 +18,14 @@ function addItem(e){
     //need to add child element including child element content to end of list
     let todoList = document.querySelector(".list-group");
     todoList.appendChild(newli);
-    //delete input field after newli is added
-    //input.value = ""; can't define inside the local scope will set everything to empty    
+    //delete input field after newli is added  
 }
 
 //Remove item
-/*<script>
-        let listItems = document.getElementsByTagName("li"); 
-        for (let i = 0; i < listItems.length; i++) {
-        listItems[i].onclick = function() {this.parentNode.removeChild(this);}
-        }
-    </script>*/
 let listItems = document.getElementsByTagName("li");
 for (let i=0; i < listItems.length; i++) {
     listItems[i].addEventListener('click', removeListItemWithDelay);
  }
-
-  
- //function removeListItem(e) {
- //    e.currentTarget.remove();
- //}
 
  function removeListItemWithDelay(e){
      let target = e.currentTarget;
@@ -46,34 +34,3 @@ for (let i=0; i < listItems.length; i++) {
      }
     setTimeout(removeCurrent, 1000);
  }
-
-/*hello*/
-
-
-
-
-
-/*///Remove item
-<script>
-        let listItems = document.getElementsByTagName("li"); 
-        for (let i = 0; i < listItems.length; i++) {
-        listItems[i].onclick = function() {this.parentNode.removeChild(this);}
-        }
-    </script>
-let listItems = document.getElementsByTagName("li");
-for (let i=0; i < listItems.length; i++) {
-    listItems[i].addEventListener('click', removeListItemWithDelay);
- }
-
-  
- //function removeListItem(e) {
- //    e.currentTarget.remove();
- //}
-
- function removeListItemWithDelay(e){
-     let target = e.currentTarget;
-     function removeCurrent(){
-         target.remove();
-     }
-    setTimeout(removeCurrent, 1000);
- }*/
