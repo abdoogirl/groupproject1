@@ -50,7 +50,7 @@ newLi.addEventListener('click', removeListItemWithDelay);
 }
 
 let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
-for (let i=0; i < listItems.length-1; i++) {
+for (let i=0; i < listItems.length; i++) {
     listItems[i].addEventListener('click', removeListItemWithDelay);
  }
 
