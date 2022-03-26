@@ -12,8 +12,8 @@ function addItem(e){
     let newLi = document.createElement('li'); 
     // Add class
     newLi.className = "list-group-item d-flex align-items-center border-0 mb-2 rounded";
-    //add inside tags, elements, content (cannot use script with innerHTML)
-    let newLiTwo = document.createElement('input');
+    
+    /*let newLiTwo = document.createElement('input');
     newLiTwo.type = "checkbox";
     newLiTwo.id = "check";
     newLi.appendChild(newLiTwo);
@@ -21,8 +21,12 @@ function addItem(e){
     newLiTwo.appendChild(newLiThree);
     let newLiFour = document.createElement('h4');
     newLiFour.className = 'resize';
-    newLiFour.innerText = newItem;
-    newLiThree.appendChild(newLiFour);
+    newLiFour.append(newItem);
+    newLiThree.appendChild(newLiFour);*/
+
+    //add inside tags, elements, content (cannot use script with innerHTML, IH dangerous and security 
+    //issue better to use append)
+    newLi.innerHTML += `<input type='checkbox' id="check"><label><h4 class="resize">${newItem}</h4></label>`
 
 //Please note that using innerHTML to append html elements (e.g. el.innerHTML += "<a href='...'>link</a>") 
 //will result in the removal of any previously set event listeners. That 
