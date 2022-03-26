@@ -12,10 +12,17 @@ function addItem(e){
     let newLi = document.createElement('li'); 
     // Add class
     newLi.className = "list-group-item d-flex align-items-center border-0 mb-2 rounded";
-    //set inside newli to value of input
-    //newLi.innerText = newItem;
-    //newli other stuff
-    newLi.innerHTML += `<input type='checkbox' id="check"><label><h4>${newItem}</h4></label>`;
+    //add inside tags, elements, content (cannot use script with innerHTML)
+    let newLiTwo = document.createElement('input');
+    newLiTwo.type = "checkbox";
+    newLiTwo.id = "check";
+    newLi.appendChild(newLiTwo);
+    let newLiThree = document.createElement('label');
+    newLiTwo.appendChild(newLiThree);
+    let newLiFour = document.createElement('h4');
+    newLiFour.className = 'resize';
+    newLiFour.innerText = newItem;
+    newLiThree.appendChild(newLiFour);
 
 //Please note that using innerHTML to append html elements (e.g. el.innerHTML += "<a href='...'>link</a>") 
 //will result in the removal of any previously set event listeners. That 
@@ -23,17 +30,8 @@ function addItem(e){
 
     //need to add child element including child element content to end of list
     let todoList = document.querySelector(".list-group");
-    let newLiTwo = 
     todoList.appendChild(newLi);
 
-
-
-   // let grabhfour = document.querySelectorAll("h4").remove();
-    //grabhfour.innerText.inn = newItem;
-    //todoList.appendChild(newli)
-    //delete input field after newli is added  
-
-}
 
 //Remove item
 let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
@@ -48,3 +46,5 @@ for (let i=0; i < listItems.length; i++) {
      }
     setTimeout(removeCurrent, 1000);
  }
+
+}

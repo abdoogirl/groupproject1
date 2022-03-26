@@ -13,9 +13,3 @@ Hanuka Mattata to-do list
 2. Remove entry - Afrika and Aaron
 3. mark entry as complete - Aaron
 4. bootstrap and css - Liz and Abby
-Hey I need to change getelementsbytagname 
-to getelementsbyclassname since I think 
-there is more li's in the traverse.html 
-you made other than the list. So just
-in case you're wondering why the code
-messed up.
