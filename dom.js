@@ -6,11 +6,11 @@ function addItem(e){
     alert('Do You Want to Include This Item in Your List?');
     e.preventDefault();
     // Get input value 
-    let newItem = document.getElementById("inputweneedtousefordomfile").value;
+    let newItem = document.getElementById("form2").value;
     // Create new li element
     let newLi = document.createElement('li'); 
     // Add class
-    newLi.className = "list-group-item d-flex align-items-center border-0 mb-2 rounded";
+    newLi.className = "list-group-item d-flex align-items-center border-0 mb-2 rounded bg-white";
     
     //let newLiTwo = document.createElement('input');
     //newLiTwo.type = "checkbox";
@@ -22,10 +22,11 @@ function addItem(e){
     //newLiFour.className = 'resize';
     //newLiFour.append(newItem);
     //newLiThree.appendChild(newLiFour);
-
+    //<li class="list-group-item d-flex align-items-center border-0 mb-2 rounded" style="background-color: #f4f6f7;">
+    //<input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
     //add inside tags, elements, content (cannot use script with innerHTML, IH dangerous and security 
     //issue better to use append)
-    newLi.innerHTML += `<input type='checkbox' id="check"><label><h4 class="resize">${newItem}</h4></label>`
+    newLi.innerHTML += `<input class="form-check-input me-2" type='checkbox'  value="" aria-label="..." >${newItem}</label>`
 
 //Please note that using innerHTML to append html elements (e.g. el.innerHTML += "<a href='...'>link</a>") 
 //will result in the removal of any previously set event listeners. That 
