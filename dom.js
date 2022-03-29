@@ -2,7 +2,7 @@
 let button = document.getElementById("newbutton");
 button.addEventListener('click', addItem);
 
-function addItem(e){
+function addItem(e) {
     alert('Do You Want to Include This Item in Your List?');
     e.preventDefault();
     // Get input value 
@@ -11,7 +11,7 @@ function addItem(e){
     let newLiOne = document.createElement('div');
     newLiOne.className = "form-check";
     // Create new li element
-    let newLi = document.createElement('li'); 
+    let newLi = document.createElement('li');
     // Add class
     newLi.className = "list-group-item d-flex align-items-center border-0 mb-2 rounded bg-white";
     // Create new input element
@@ -47,28 +47,36 @@ function addItem(e){
     // append label element to span element
     newLi.appendChild(newLiThree);
 
-//Remove item
-//let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
-newLi.addEventListener('click', removeListItemWithDelay);
- function removeListItemWithDelay(e){
-     let target = e.currentTarget;
-     function removeCurrent(){
-         target.remove();
-     }
-    setTimeout(removeCurrent, 1000);
- }
+    //Remove item
+    //let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
+    newLi.addEventListener('click', removeListItemWithDelay);
+
+    function removeListItemWithDelay(e) {
+        let target = e.currentTarget;
+
+        function removeCurrent() {
+            target.remove();
+        }
+        setTimeout(removeCurrent, 1000);
+    }
 
 }
 
 let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
-for (let i=0; i < listItems.length; i++) {
+for (let i = 0; i < listItems.length; i++) {
     listItems[i].addEventListener('click', removeListItemWithDelay);
- }
+}
 
- function removeListItemWithDelay(e){
-     let target = e.currentTarget;
-     function removeCurrent(){
-         target.remove();
-     }
+function removeListItemWithDelay(e) {
+    let target = e.currentTarget;
+
+    function removeCurrent() {
+        target.remove();
+    }
     setTimeout(removeCurrent, 1000);
- }
+}
+
+//get all the forms on the page
+//console.log(document.forms);
+
+//everything is looking nice, thank you for the help! It works, I am about to commit.
