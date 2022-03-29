@@ -44,12 +44,12 @@ function addItem(e) {
     newLiOne.appendChild(newLi);
     // append input element to span element
     newLi.appendChild(newLiTwo);
-    // append label element to span element
+    // append label element to div element
     newLi.appendChild(newLiThree);
 
     //Remove item
     //let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
-    newLi.addEventListener('click', removeListItemWithDelay);
+    newLiOne.addEventListener('click', removeListItemWithDelay);
 
     function removeListItemWithDelay(e) {
         let target = e.currentTarget;
@@ -75,8 +75,3 @@ function removeListItemWithDelay(e) {
     }
     setTimeout(removeCurrent, 1000);
 }
-
-//get all the forms on the page
-//console.log(document.forms);
-
-//everything is looking nice, thank you for the help! It works, I am about to commit.
