@@ -7,35 +7,45 @@ function addItem(e){
     e.preventDefault();
     // Get input value 
     let newItem = document.getElementById("form2").value;
+    // Create new span element
+    let newLiOne = document.createElement('div');
+    newLiOne.className = "form-check";
     // Create new li element
     let newLi = document.createElement('li'); 
     // Add class
     newLi.className = "list-group-item d-flex align-items-center border-0 mb-2 rounded bg-white";
-    
-    //let newLiTwo = document.createElement('input');
-    //newLiTwo.type = "checkbox";
-    //newLiTwo.id = "check";
-    //newLi.appendChild(newLiTwo);
-    //let newLiThree = document.createElement('label');
-    //newLiTwo.appendChild(newLiThree);
-    //let newLiFour = document.createElement('h4');
-    //newLiFour.className = 'resize';
-    //newLiFour.append(newItem);
-    //newLiThree.appendChild(newLiFour);
-    //<li class="list-group-item d-flex align-items-center border-0 mb-2 rounded" style="background-color: #f4f6f7;">
-    //<input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-    //add inside tags, elements, content (cannot use script with innerHTML, IH dangerous and security 
-    //issue better to use append)
-    newLi.innerHTML += `<input class="form-check-input me-2" type='checkbox'  value="" aria-label="..." >${newItem}</label>`
-
-//Please note that using innerHTML to append html elements (e.g. el.innerHTML += "<a href='...'>link</a>") 
-//will result in the removal of any previously set event listeners. That 
-//is, after you append any HTML element that way you won't be able to listen to the previously set event listeners.
-
+    // Create new input element
+    let newLiTwo = document.createElement('input');
+    // Add type
+    newLiTwo.type = "checkbox";
+    // Add id
+    newLiTwo.id = newItem;
+    // Add class 
+    newLiTwo.className = "form-check-input me-2";
+    // Add value
+    newLiTwo.value = "yes";
+    // Add ariaLabel
+    newLiTwo.ariaLabel = "...";
+    //Add name
+    newLiTwo.name = newItem;
+    // Create new label element
+    let newLiThree = document.createElement('label')
+    //Add a class for formatting
+    newLiThree.className = "form-check-label";
+    // Add for to label
+    newLiThree.for = newItem;
+    // Create the innerText for label
+    newLiThree.innerText = newItem;
     //need to add child element including child element content to end of list
     let todoList = document.querySelector(".list-group");
-    todoList.appendChild(newLi);
-
+    // append span element to ul
+    todoList.appendChild(newLiOne);
+    // append li element to span
+    newLiOne.appendChild(newLi);
+    // append input element to span element
+    newLi.appendChild(newLiTwo);
+    // append label element to span element
+    newLi.appendChild(newLiThree);
 
 //Remove item
 //let listItems = document.getElementsByClassName("list-group-item d-flex align-items-center border-0 mb-2 rounded");
